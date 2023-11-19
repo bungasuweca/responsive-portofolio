@@ -11,7 +11,7 @@
     --second-color: hsl(343, 100%, 99%);
     --title-color: hsl(344, 51%, 25%);
     --text-color: hsl(344, 16%, 31%);
-    --text-color-light: hsl(344, 13%, 55%);
+    --text-color-light: hsl(343, 8%, 58%);
     --body-color: hsl(39, 70%, 96%);
     --container-color: hsl(207, 4%, 95%);
 
@@ -363,9 +363,91 @@ body.dark-theme {
 }
 
 /*=============== SKILLS ===============*/
+.skills__container {
+    row-gap: 3.5rem
+}
 
-/* Animation skills */
+.skills__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 2.5rem;
 
+}
+
+.skills__title i {
+    font-size: 1rem;
+    font-weight: initial;
+}
+
+.skills__info,
+.skills__data,
+.skills__blob {
+    display: grid;
+}
+
+.skills__info {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 2rem;
+}
+
+.skills__data {
+    justify-content: center;
+    text-align: center;
+}
+
+.skills__blob {
+    width: 80px;
+    height: 80px;
+    background-color: var(--first-color);
+    border-radius: 3rem;
+    place-items: center;
+    margin-bottom: 1rem;
+}
+
+.skills__blob img {
+    width: 45px;
+}
+
+.skills__name {
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.skills__subtitle {
+    font-size: var(--tiny-font-size);
+    color: var(--text-color-light);
+}
+
+/* animate */
+.skills__blob:hover img {
+    animation: bounce-skills .6s;
+}
+
+@keyframes bounce-skills {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translateY(-6px);
+    }
+
+    40% {
+        transform: translate(0);
+    }
+
+    60% {
+        transform: translateY(-3px);
+    }
+
+    80% {
+        transform: translate(0);
+    }
+}
 
 /*=============== QUALIFICATION ===============*/
 
